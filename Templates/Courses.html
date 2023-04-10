@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+       <li> <a href="{% url 'login'%}">Login</a></li>
+       
+      </ul>
+    </div>
+
+    <div id="container" style="margin:20px 60px;display:flex">
+        <div class="card" style="width: 18rem;">
+            <img style="height: 140px;" src="https://w7.pngwing.com/pngs/1005/511/png-transparent-web-development-html-logo-world-wide-web-consortium-create-html-signature-angle-text-rectangle-thumbnail.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">Hyper Text Markup Language</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> &nbsp; &nbsp; &nbsp;
+
+          <div class="card" style="width: 18rem;">
+            <img style="height: 140px;" src="https://png.pngitem.com/pimgs/s/198-1985035_image-logo-in-css-css-assurance-logo-hd.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">CSS</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>&nbsp;&nbsp;&nbsp;
+
+          <div class="card" style="width: 18rem;">
+            <img style="height: 140px;" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-with-coffee-logo-10.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">JavaScript</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>&nbsp;&nbsp;&nbsp;
+
+          <div class="card" style="width: 18rem;">
+            <img style="height: 140px;" src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Python</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

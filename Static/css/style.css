@@ -1,0 +1,35 @@
+*{margin: 0%;padding: 0%;box-sizing: border-box;}
+
+body{
+    background-color: whitesmoke;
+}
+
+.navbar{
+    background-color: #232b2d3d;
+    border: 2px solid;
+    height: 40px;
+    width: 100%;
+    padding: 5px 5px;
+    text-transform: uppercase;
+
+}
+
+.navbar li{
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+}
+.navbar li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+
+}
+
+
+.box1{    
+    width: 800px;
+    padding: 20px 20px;
+    margin: 40px 200px;
+    text-align: center;
+}

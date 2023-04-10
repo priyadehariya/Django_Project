@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information of Students</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url("{% static 'img/bg.png' %}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+        #nav {
+            overflow: hidden;
+            background-color: rgba(21, 223, 207, 0.804);
+            height: 50px;
+            padding: 0px;
+            text-align: center;
+        }
+        
+        #nav a {
+            float: left;
+            display: block;
+            color: #000000;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            text-align: center;
+        }
+        
+        #nav a:hover {
+            background-color: rgb(0, 251, 255);
+        }
+        
+        #study img {
+            width: 400px;
+            height: 400px;
+        }
+        
+        #Registration {
+            background-color: rgba(0, 241, 221, 0.646);
+            margin-top: -100px;
+            height: 350px;
+            width: 300px;
+            margin-left: 35%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        #Registration form input {
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        #Django {
+            margin-left: 400px;
+            margin-right: 150px;
+            margin-top: -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <a href="">Course</a>
+        <a href="">Contact</a>
+        <a href="">Registion</a>
+        <a href="">Login</a>
+
+    </div>
+    <div id="Information">
+        <table border="1px">
+            <tr>
+                <th>Student Name</th>
+                <th>Contact Number</th>
+                <th>Selected Course</th>
+                <th>Email ID</th>
+                <th>Login Password</th>
+                <th>Action</th>
+            </tr>
+            {% for i in std%}
+            <tr>
+                <td>{{i.Name}}</td>
+                <td>{{i.Mobile}}</td>
+                <td>{{i.Course}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Password}}</td>
+                <td>
+                    <a href="">Edit</a> /
+                    <a href="">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>

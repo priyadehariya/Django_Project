@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazing Courses</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url("{% static 'img/bg.png' %}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+        #nav {
+            overflow: hidden;
+            background-color: rgba(21, 223, 207, 0.804);
+            height: 50px;
+            padding: 0px;
+            text-align: center;
+        }
+        
+        #nav a {
+            float: left;
+            display: block;
+            color: #000000;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            text-align: center;
+        }
+        
+        #nav a:hover {
+            background-color: rgb(0, 251, 255);
+        }
+        
+        #study img {
+            width: 400px;
+            height: 400px;
+        }
+        
+        #Registration {
+            background-color: rgba(0, 241, 221, 0.646);
+            margin-top: -100px;
+            height: 350px;
+            width: 300px;
+            margin-left: 35%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        #Registration form input {
+            padding: 5px;
+            border-radius: 10px;
+        }
+        
+        #Django {
+            margin-left: 400px;
+            margin-right: 150px;
+            margin-top: -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <a href="{% url 'Courses' %}">Course</a>
+        <a href="">Contact</a>
+        <a href="{% url 'Register'%}">Registion</a>
+        <a href="{% url 'login'%}">Login</a>
+        <a href="http://127.0.0.1:8000/admin">Admin</a>
+
+    </div>
+
+
+
+    <div id="study">
+        <img src="{% static 'img/wbg.png'%}" alt="" />
+    </div>
+
+    <div id="Django">
+        <img src="{% static 'img/Django.png'%}" id="Django" alt="" />
+    </div>
+
+
+</body>
+
+</html>

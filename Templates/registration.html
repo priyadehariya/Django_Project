@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+       <li> <a href="{% url 'login'%}">Login</a></li>
+       
+      </ul>
+    </div>
+
+    
+      
+ 
+    <div class="box1" id="Registration" style="background-color: aquamarine;">
+      <form  method="POST">
+        {% csrf_token %}
+    
+            <label for="fname">Full Name</label> <br>
+        <input type="text" name="fullname" id="" required /> <br><br>
+    
+        <label for="mobile">Mobile Number </label> <br>
+        <input type="text" name="mobile" id="" required /><br /><br />
+        <label for="cours">Courses</label>
+        <select
+          name="course"
+          id=""
+          style="padding: 5px 5px; border-radius: 5px"
+        >
+          <option value="">Select</option>
+          <option value="python">Python</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+        <br /><br />
+        <label for="email">Email ID</label><br>
+        <input type="email" name="email" id="" required /><br /><br />
+        <label for="password">Set Password</label><br>
+        <input type="password" name="password" id="" required /><br /><br />
+        <button
+          type="submit"
+          style="width: 70px; border-radius: 7px;"
+        >
+          Submit
+        </button>
+      </form>
+      
+    </div>
+  </body>
+</html>
